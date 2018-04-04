@@ -1,0 +1,11 @@
+{
+  "name": "shauntools",
+  "version": "1.0.0",
+  "description": "",
+  "bin": {
+    "awesometool": "./bin/awesometool",
+    "anothertool": "./bin/anothertool"
+  },
+  "author": "",
+  "license": "ISC"
+}
