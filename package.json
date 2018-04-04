@@ -5,7 +5,8 @@
   "bin": {
     "awesometool": "./bin/awesometool",
     "anothertool": "./bin/anothertool",
-    "linecounter": "./bin/linecounter"
+    "linecounter": "./bin/linecounter",
+    "difficultadd": "./bin/difficultadd"
   },
   "author": "",
   "license": "ISC",
