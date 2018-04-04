@@ -1,0 +1,12 @@
+#!/usr/bin/env node
+
+var cmdlineArgs = process.argv.slice(2);
+if(cmdlineArgs < 2) {
+    console.log("Syntax: difficultadd number1 number2");
+    process.exit(-1);
+}
+
+var colors = require("colors");
+var difficultmath = require("../lib/difficultmath");
+var sum = difficultmath.add(parseFloat(cmdlineArgs[0]), parseFloat(cmdlineArgs[1]));
+console.log("Sum: " + colors.green(sum));

@@ -8,5 +8,8 @@
     "linecounter": "./bin/linecounter"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.2.1"
+  }
 }
