@@ -1,0 +1,24 @@
+#!/usr/bin/env node
+
+var fs = require("fs");
+
+var cmdlineArgs = process.argv.slice(2);
+if(cmdlineArgs < 1) {
+    console.log("Give me a text filename.");
+    process.exit(-1);
+}
+
+var filename = cmdlineArgs.shift();
+if(!fs.existsSync(filename)) {
+    console.log("File doesn't exist: " + filename);
+    process.exit(-1);
+}
+
+var stats = fs.statSync(filename);
+if(stats.size > 100000) {
+    console.log("File too damned big: " + filename);
+    process.exit(-1);
+}
+
+var lines = fs.readFileSync(filename, 'utf8').split('\n');
+console.log("I count " + lines.length + " lines.");
